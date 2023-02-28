@@ -23,8 +23,7 @@ ActiveRecord::Schema.define(version: 2023_02_27_114648) do
   end
 
   create_table "streams", force: :cascade do |t|
-    t.string "name"
-    t.integer "sitting_capacity"
+    t.string "streams"
   end
 
   create_table "subjects", force: :cascade do |t|
