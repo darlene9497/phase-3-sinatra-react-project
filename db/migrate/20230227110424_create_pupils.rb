@@ -4,6 +4,7 @@ class CreatePupils < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :age
       t.string :gender
+      t.string :parent_contact
       t.integer :teacher_id
       t.integer :stream_id
       t.integer :subject_id

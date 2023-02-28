@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2023_02_27_114648) do
     t.string "name"
     t.integer "age"
     t.string "gender"
+    t.string "parent_contact"
     t.integer "teacher_id"
     t.integer "stream_id"
     t.integer "subject_id"
@@ -23,7 +24,7 @@ ActiveRecord::Schema.define(version: 2023_02_27_114648) do
 
   create_table "streams", force: :cascade do |t|
     t.string "name"
-    t.integer "capacity"
+    t.integer "sitting_capacity"
   end
 
   create_table "subjects", force: :cascade do |t|
