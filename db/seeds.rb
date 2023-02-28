@@ -13,11 +13,11 @@ genders = %w!Male Female!
 #     )
 # end
 
-for x in streams do
-    Stream.create(
-        streams: streams[rand(0...streams.size)]
-    )
-end
+# for x in streams do
+#     Stream.create(
+#         streams: streams[rand(0...streams.size)]
+#     )
+# end
 
 for x in subjects do
     Subject.create(
@@ -39,7 +39,7 @@ end
         gender: genders[rand(0...genders.size)],
         parent_contact: Faker::Internet.email,
         teacher_id: rand(1..Teacher.all.size),
-        stream_id: rand(1..Stream.all.size),
+        stream_name: streams[rand(0...streams.size)],
         subject_id: rand(1..Subject.all.size),
     )
 end
