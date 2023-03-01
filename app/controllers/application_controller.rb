@@ -64,5 +64,47 @@ class ApplicationController < Sinatra::Base
     pupil.to_json
   end
 
-  
+  # teachers table
+  get '/teachers' do
+    teacher = Teacher.all.order(:name)
+    teacher.to_json
+  end
+
+  get '/teachers/:id' do
+    teacher = Teacher.find(params[:id])
+    teacher.to_json
+  end
+
+  post '/teachers' do
+    teacher = Teacher.create(
+      name: params[:name],
+      employee_id: params[:employee_id]
+    )
+    teacher.to_json
+  end
+
+  patch '/teachers/:id' do
+    teacher = Teacher.find(params[:id])
+    teacher.update(
+      name: params[:name],
+      employee_id: params[:employee_id]
+    )
+    teacher.to_json
+  end
+
+  put '/teachers' do
+    teacher = Teacher.find(params[:id])
+    teacher.update(
+      name: params[:name],
+      employee_id: params[:employee_id]
+    )
+    teacher.to_json
+  end
+
+  delete '/teachers/:id' do
+    teacher = Teacher.find(params[:id])
+    teacher.destroy
+    teacher.to_json
+  end
+
 end

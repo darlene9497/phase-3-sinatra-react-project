@@ -29,6 +29,7 @@ for x in teachers do
     Teacher.create(
         name: x,
         employee_id: rand(0000..1000)
+        #subject_id: rand(1..Subject.all.size)
     )
 end
 
@@ -40,7 +41,7 @@ end
         parent_contact: Faker::Internet.email,
         teacher_id: rand(1..Teacher.all.size),
         stream_name: streams[rand(0...streams.size)],
-        subject_id: rand(1..Subject.all.size),
+        subject_id: rand(1..Subject.all.size)
     )
 end
 
