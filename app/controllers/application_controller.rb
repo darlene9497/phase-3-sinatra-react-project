@@ -142,5 +142,39 @@ class ApplicationController < Sinatra::Base
   end
 
   # Subjects table
+  get '/subjects' do
+    subject = Subject.all.order(:name)
+    subject.to_json
+  end
+
+  get '/subjects/:id' do
+    subject = Subject.find(params[:id])
+    subject.to_json
+  end
+
+  post '/subjects' do
+    subject = Subject.create(
+      name: params[:name],
+      # subject_id: params[:subject_id]
+      # teacher_id: params[:teacher_id]
+    )
+    subject.to_json
+  end
+
+  patch '/subjects/:id' do
+    subject = Subject.find(params[:id])
+    subject.update(
+      name: params[:name],
+      # subject_id: params[:subject_id]
+      # teacher_id: params[:teacher_id]
+    )
+    subject.to_json
+  end
+
+  delete '/subjects/:id' do
+    subject = Subject.find(params[:id])
+    subject.destroy
+    subject.to_json
+  end
 
 end
