@@ -13,11 +13,11 @@ genders = %w!Male Female!
 #     )
 # end
 
-# for x in streams do
-#     Stream.create(
-#         streams: streams[rand(0...streams.size)]
-#     )
-# end
+for x in streams do
+    Stream.create(
+        name: x
+    )
+end
 
 for x in subjects do
     Subject.create(
