@@ -109,7 +109,7 @@ class ApplicationController < Sinatra::Base
 
   # Streams table
   get '/streams' do
-    stream = Stream.all.order(:name)
+    stream = Streams.all.order(:name)
     stream.to_json
   end
 
@@ -119,7 +119,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/streams' do
-    stream = Stream.create(
+    stream = Stream.all(
       name: params[:name],
       # sitting_capacity: params[:sitting_capacity]
     )
