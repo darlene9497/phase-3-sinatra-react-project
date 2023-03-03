@@ -1,4 +1,37 @@
-# Phase 3 Project Guidelines
+# Tots Kindergarten
+This repository houses the server side code for the administrations project.
+
+# Entity Relaionship Diagram(ERD)
+https://drawsql.app/teams/cookies-1/diagrams/sinatra-react
+
+# Description
+This is a simple CRUD, MVC Sinatra app that allows the user to add to a Kindergarten administration database-- including the pupil's name, stream, subject and teacher. A user can:
+1. Sign up for registration
+2. Log in to the school's account
+3. See a list of currently enrolled and past enrolled pupils
+4. View the teachers info
+5. View a list of all the subjects
+6. Add new pupils to the pupils list
+
+# Installation
+Clone down this repository. Then run "bundle" to install all the required gem files. Then you need to run "rake db:migrate" and "rake db:seed" to set up the database.
+
+# License
+MIT License
+
+Copyright (c) [2023] [Darlene Nandabi]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Authors info
+Contact : (+254) 723858518 Email : nyamburadarlene9@gmail.com
+
+
+<!-- # Phase 3 Project Guidelines
 
 ## Learning Goals
 
@@ -135,4 +168,4 @@ fetch("http://localhost:9292/test")
 [create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
 [dbdiagram.io]: https://dbdiagram.io/
 [postman download]: https://www.postman.com/downloads/
-[network tab]: https://developer.chrome.com/docs/devtools/network/
+[network tab]: https://developer.chrome.com/docs/devtools/network/ -->

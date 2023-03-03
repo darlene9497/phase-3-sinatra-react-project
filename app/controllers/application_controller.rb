@@ -44,20 +44,6 @@ class ApplicationController < Sinatra::Base
     pupil.to_json
   end
 
-  # put '/pupils' do
-  #   pupil = Pupil.find(params[:id])
-  #   pupil.update(
-  #     name: params[:name],
-  #     age: params[:age],
-  #     gender: params[:gender],
-  #     parent_contact: params[:parent_contact],
-  #     teacher_id: params[:teacher_id],
-  #     stream_name: params[:stream_name],
-  #     subject_id: params[:subject_id]
-  #   )
-  #   pupil.to_json
-  # end
-
   delete '/pupils/:id' do
     pupil = Pupil.find(params[:id])
     pupil.destroy
@@ -91,15 +77,6 @@ class ApplicationController < Sinatra::Base
     )
     teacher.to_json
   end
-
-  # put '/teachers' do
-  #   teacher = Teacher.find(params[:id])
-  #   teacher.update(
-  #     name: params[:name],
-  #     employee_id: params[:employee_id]
-  #   )
-  #   teacher.to_json
-  # end
 
   delete '/teachers/:id' do
     teacher = Teacher.find(params[:id])
@@ -175,6 +152,15 @@ class ApplicationController < Sinatra::Base
     subject = Subject.find(params[:id])
     subject.destroy
     subject.to_json
+  end
+  # extra routes
+  get '/rand' do
+    random = rand(000000...10000)
+    {random: random}.to_json
+  end
+
+  post '/userdata' do
+    {username: params[:username], pass: params[:password]}.to_json
   end
 
 end
