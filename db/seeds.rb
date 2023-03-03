@@ -4,7 +4,7 @@ puts "🌱 Seeding spices..."
 # sitting_capacity = 10..15
 streams = %w!Red Orange Yellow Green Blue Violet!
 subjects = %w!Reading Writing Maths Science Arts Music Physical-Education!
-teachers = %w!Ms.Grande Tr.Bey Mrs.Cardi Mr.Bean!
+teachers = %w!Ms.Grande Tr.Bey Mrs.Cardi Mr.Bean Tr.Joe Miss.Wanda Mrs.North!
 genders = %w!Male Female!
 
 # for x in sitting_capacity do
