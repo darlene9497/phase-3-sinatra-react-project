@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_02_27_114648) do
     t.integer "age"
     t.string "gender"
     t.string "parent_contact"
-    t.integer "teacher_id"
+    t.string "teacher_name"
     t.string "stream_name"
     t.integer "subject_id"
   end

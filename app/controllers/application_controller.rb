@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
      age: params[:age],
      gender: params[:gender],
      parent_contact: params[:parent_contact],
-     teacher_id: params[:teacher_id],
+     teacher_name: params[:name],
      stream_name: params[:stream_name],
      subject_id: params[:subject_id]
   )
@@ -37,7 +37,7 @@ class ApplicationController < Sinatra::Base
       age: params[:age],
       gender: params[:gender],
       parent_contact: params[:parent_contact],
-      teacher_id: params[:teacher_id],
+      teacher_name: params[:teacher_name],
       stream_name: params[:stream_name],
       subject_id: params[:subject_id]
     )

@@ -39,7 +39,7 @@ end
         age: rand(3..7),
         gender: genders[rand(0...genders.size)],
         parent_contact: Faker::Internet.email,
-        teacher_id: rand(1..Teacher.all.size),
+        teacher_name: teachers[rand(0..teachers.size)],
         stream_name: streams[rand(0...streams.size)],
         subject_id: rand(1..Subject.all.size)
     )
