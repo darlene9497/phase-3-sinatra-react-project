@@ -1,17 +1,34 @@
-# Tots Kindergarten
-This repository houses the server side code for the administrations project.
+# Tots Preparatory
+This repository houses the server side code for the school's management system.
+
+# Useful links
+
+Client side (github repo): https://github.com/darlene9497/sinatra-react-project-frontend.git
 
 # Entity Relaionship Diagram(ERD)
 https://drawsql.app/teams/cookies-1/diagrams/sinatra-react
 
 # Description
-This is a simple CRUD, MVC Sinatra app that allows the user to add to a Kindergarten administration database-- including the pupil's name, stream, subject and teacher. A user can:
-1. Sign up for registration
-2. Log in to the school's account
-3. See a list of currently enrolled and past enrolled pupils
-4. View the teachers info
-5. View a list of all the subjects
-6. Add new pupils to the pupils list
+# What works?
+# A user can:
+
+1. View pupils, teachers and subjects tables
+
+2. Sign up a new pupil
+
+# An admin can:
+
+1. Do all the things a user can do
+
+2. Edit a pupil's information
+
+3. Delete a pupil's information
+
+# What doesn't work?
+1. User authentication
+
+# Future implementations
+A user should be able to visit the app but be able to only see his/her own information. This towers on user authentication.
 
 # Installation
 Clone down this repository. Then run "bundle" to install all the required gem files. Then you need to run "rake db:migrate" and "rake db:seed" to set up the database.
@@ -169,3 +186,4 @@ fetch("http://localhost:9292/test")
 [dbdiagram.io]: https://dbdiagram.io/
 [postman download]: https://www.postman.com/downloads/
 [network tab]: https://developer.chrome.com/docs/devtools/network/ -->
+
