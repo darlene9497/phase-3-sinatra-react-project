@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
      age: params[:age],
      gender: params[:gender],
      parent_contact: params[:parent_contact],
-     teacher_name: params[:name],
+     teacher_id: params[:teacher_id],
      stream_name: params[:stream_name],
      subject_id: params[:subject_id]
   )
@@ -37,7 +37,7 @@ class ApplicationController < Sinatra::Base
       age: params[:age],
       gender: params[:gender],
       parent_contact: params[:parent_contact],
-      teacher_name: params[:teacher_name],
+      teacher_id: params[:teacher_id],
       stream_name: params[:stream_name],
       subject_id: params[:subject_id]
     )
@@ -98,7 +98,6 @@ class ApplicationController < Sinatra::Base
   post '/streams' do
     stream = Stream.all(
       name: params[:name],
-      # sitting_capacity: params[:sitting_capacity]
     )
     stream.to_json
   end
@@ -107,7 +106,6 @@ class ApplicationController < Sinatra::Base
     stream = Stream.find(params[:id])
     stream.update(
       name: params[:name],
-      # sitting_capacity: params[:sitting_capacity]
     )
     stream.to_json
   end
@@ -132,8 +130,6 @@ class ApplicationController < Sinatra::Base
   post '/subjects' do
     subject = Subject.create(
       name: params[:name],
-      # subject_id: params[:subject_id]
-      # teacher_id: params[:teacher_id]
     )
     subject.to_json
   end
@@ -142,8 +138,6 @@ class ApplicationController < Sinatra::Base
     subject = Subject.find(params[:id])
     subject.update(
       name: params[:name],
-      # subject_id: params[:subject_id]
-      # teacher_id: params[:teacher_id]
     )
     subject.to_json
   end
